@@ -1,5 +1,5 @@
+//neoforge1.21.1
 package com.yourmord;
-
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -10,14 +10,12 @@ import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-@Mod("terminal")  // 直接写 "terminal"
+@Mod("terminal")
 public class terminal {
-    public static final String MODID = "terminal";  // 改为 terminal
+    public static final String MODID = "terminal";
     private static final Logger LOGGER = LoggerFactory.getLogger(terminal.class);
     private static boolean isAndroid = false;
     private static boolean androidWarningIgnored = false;
-
     public terminal() {
         try {
             Class.forName("android.os.Build");
@@ -26,16 +24,13 @@ public class terminal {
         } catch (ClassNotFoundException ignored) {
             LOGGER.info("Not an Android environment.");
         }
-
         NeoForge.EVENT_BUS.register(new CommandHandler());
 
         if (isAndroid) {
             NeoForge.EVENT_BUS.register(this);
         }
-
         Runtime.getRuntime().addShutdownHook(new Thread(CommandHandler::shutdownExecutor));
     }
-
     public static boolean isAndroid() {
         return isAndroid;
     }
@@ -43,11 +38,9 @@ public class terminal {
     public static void setAndroidWarningIgnored(boolean ignored) {
         androidWarningIgnored = ignored;
     }
-
     public static boolean isAndroidWarningIgnored() {
         return androidWarningIgnored;
     }
-
     @SubscribeEvent
     public void onClientLogin(ClientPlayerNetworkEvent.LoggingIn event) {
         if (isAndroid && !androidWarningIgnored && event.getPlayer() != null) {
