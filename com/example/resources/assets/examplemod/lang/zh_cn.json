@@ -1,0 +1,12 @@
+/*
+ * Copyright (C) 2026 Your Name
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ */
+{
+  "command.yourmodid.success.no_output": "命令执行成功，无输出。",
+  "command.yourmodid.error.general": "你输入了不支持的指令，该指令在当前系统环境下无法使用。",
+  "command.yourmodid.error.permission": "你没有权限执行此命令。"
+}
