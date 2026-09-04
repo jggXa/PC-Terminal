@@ -1,0 +1,5 @@
+{
+  "command.terminal.success.no_output": "Command executed successfully, but no output.",
+  "command.terminal.error.general": "You used an incorrect command that is not supported by your computer",
+  "command.terminal.error.permission": "You do not have permission to execute this command."
+}

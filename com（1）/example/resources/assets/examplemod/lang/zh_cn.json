@@ -1,0 +1,5 @@
+{
+  "command.terminal.success.no_output": "命令执行成功，无输出。",
+  "command.terminal.error.general": "你输入了不支持的指令，该指令在当前系统环境下无法使用。",
+  "command.terminal.error.permission": "你没有权限执行此命令。"
+}
